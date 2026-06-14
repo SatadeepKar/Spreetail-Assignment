@@ -35,6 +35,7 @@ app.get("/health", (_req, res) => {
 });
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
+// Mount routes with /api prefix (for local dev and standard routing)
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/groups", groupsRouter);
@@ -42,6 +43,15 @@ app.use("/api/groups/:groupId/expenses", expensesRouter);
 app.use("/api/groups/:groupId/settlements", settlementsRouter);
 app.use("/api/groups/:groupId/balances", balancesRouter);
 app.use("/api/groups/:groupId/import", importRouter);
+
+// Mount routes without /api prefix (if Vercel service prefix is stripped)
+app.use("/auth", authRouter);
+app.use("/users", usersRouter);
+app.use("/groups", groupsRouter);
+app.use("/groups/:groupId/expenses", expensesRouter);
+app.use("/groups/:groupId/settlements", settlementsRouter);
+app.use("/groups/:groupId/balances", balancesRouter);
+app.use("/groups/:groupId/import", importRouter);
 
 // ─── 404 handler ─────────────────────────────────────────────────────────────
 app.use((_req, res) => {
