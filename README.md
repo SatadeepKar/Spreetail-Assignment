@@ -4,7 +4,7 @@ A full-stack shared expense tracker built for four flatmates (Aisha, Rohan, Priy
 
 ## Live Demo
 
-- **Frontend:** [https://vercel.com/satadeepkars-projects/spreetail-assignment](https://vercel.com/satadeepkars-projects/spreetail-assignment)) 
+- **Frontend:** [https://spreetail-assignment-eosin.vercel.app/](https://spreetail-assignment-eosin.vercel.app/) 
 
 ## Tech Stack
 
