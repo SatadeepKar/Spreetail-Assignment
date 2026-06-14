@@ -1,0 +1,103 @@
+Row,Type,Severity,Description,Auto Fixed,Auto Fix Description,Resolution
+2,UNKNOWN_MEMBER,warning,"Row 2: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+2,UNKNOWN_PAYER,warning,"Row 2: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+3,UNKNOWN_MEMBER,warning,"Row 3: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+3,UNKNOWN_PAYER,error,"Row 3: paid_by ""Priya"" is not a known member and has no close match.",false,,needs_review
+4,UNKNOWN_PAYER,error,"Row 4: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+4,UNKNOWN_MEMBER,warning,"Row 4: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+5,UNKNOWN_MEMBER,warning,"Row 5: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,approved
+6,DUPLICATE_EXACT,error,"Rows 5 and 6 appear to be duplicate entries: both are ""Dev"" paying ~3200 on 2026-02-08 (""Dinner at Marina Bites"" vs ""dinner - marina bites""). Row 6 is flagged for deletion.",false,,needs_review
+6,UNKNOWN_MEMBER,warning,"Row 6: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+7,UNKNOWN_MEMBER,warning,"Row 7: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+7,UNKNOWN_PAYER,warning,"Row 7: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+7,FORMAT_AMOUNT,info,"Row 7: Amount ""1,200"" has comma separators. Auto-stripped to ""1200"".",true,"""1,200"" → ""1200""",auto_fixed
+8,UNKNOWN_MEMBER,warning,"Row 8: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+8,UNKNOWN_PAYER,error,"Row 8: paid_by ""Meera"" is not a known member and has no close match.",false,,needs_review
+9,UNKNOWN_MEMBER,warning,"Row 9: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+9,NAME_NORMALIZATION,info,"Row 9: paid_by ""priya"" normalized to ""Priya""",true,"Normalized ""priya"" → ""Priya""",auto_fixed
+9,UNKNOWN_PAYER,error,"Row 9: paid_by ""Priya"" is not a known member and has no close match.",false,,needs_review
+10,EXCESS_PRECISION,info,"Row 10: Amount ""899.995"" has 3 decimal places. Rounded to 900.00.",true,899.995 → 900,auto_fixed
+10,UNKNOWN_PAYER,error,"Row 10: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+10,UNKNOWN_MEMBER,warning,"Row 10: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+11,UNKNOWN_PAYER,error,"Row 11: paid_by ""Priya S"" is not a known member and has no close match.",false,,needs_review
+11,UNKNOWN_MEMBER,warning,"Row 11: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+12,UNKNOWN_MEMBER,warning,"Row 12: Unknown participant(s): Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+12,UNKNOWN_PAYER,error,"Row 12: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+12,NONSTANDARD_SPLIT_TYPE,info,"Row 12: split_type ""unequal"" is non-standard. Treating as EXACT (specific amounts provided in split_details).",true,"Mapped ""unequal"" → ""exact""",auto_fixed
+13,UNKNOWN_MEMBER,warning,"Row 13: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+13,MISSING_PAYER,warning,"Row 13 (""House cleaning supplies""): paid_by is blank. Expense will be PENDING until a payer is assigned.",false,,needs_review
+14,IS_SETTLEMENT,warning,"Row 14 (""Rohan paid Aisha back""): This looks like a settlement or deposit, not a shared expense. Notes say: ""this is a settlement not an expense??""",false,,needs_review
+14,UNKNOWN_MEMBER,warning,Row 14: Unknown participant(s): Aisha. These will be created as guests.,false,,needs_review
+14,UNKNOWN_PAYER,error,"Row 14: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+15,UNKNOWN_MEMBER,warning,"Row 15: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+15,INVALID_PERCENTAGE,error,"Row 15 (""Pizza Friday""): Percentages sum to 110.0% instead of 100%. This row cannot be imported as-is.",false,,needs_review
+15,UNKNOWN_PAYER,warning,"Row 15: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+16,UNKNOWN_MEMBER,warning,"Row 16: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+16,UNKNOWN_PAYER,warning,"Row 16: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+17,UNKNOWN_MEMBER,warning,"Row 17: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+17,UNKNOWN_PAYER,error,"Row 17: paid_by ""Meera"" is not a known member and has no close match.",false,,needs_review
+18,UNKNOWN_MEMBER,warning,"Row 18: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+18,UNKNOWN_PAYER,error,"Row 18: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+19,UNKNOWN_MEMBER,warning,"Row 19: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+19,UNKNOWN_PAYER,warning,"Row 19: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+20,FOREIGN_CURRENCY,warning,"Row 20 (""Goa villa booking""): Amount is in USD ($540). Will be converted using the exchange rate you provide (default ₹84/USD).",false,,needs_review
+20,UNKNOWN_MEMBER,warning,"Row 20: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+21,UNKNOWN_MEMBER,warning,"Row 21: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+21,FOREIGN_CURRENCY,warning,"Row 21 (""Beach shack lunch""): Amount is in USD ($84). Will be converted using the exchange rate you provide (default ₹84/USD).",false,,needs_review
+21,UNKNOWN_PAYER,error,"Row 21: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+22,RATIO_SPLIT,info,"Row 22: split_type ""share"" uses ratio-based splitting. Supported.",true,"Treating ""share"" as ratio split type",auto_fixed
+22,UNKNOWN_MEMBER,warning,"Row 22: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+22,UNKNOWN_PAYER,error,"Row 22: paid_by ""Priya"" is not a known member and has no close match.",false,,needs_review
+23,UNKNOWN_MEMBER,warning,"Row 23: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+23,FOREIGN_CURRENCY,warning,"Row 23 (""Parasailing""): Amount is in USD ($150). Will be converted using the exchange rate you provide (default ₹84/USD).",false,,needs_review
+24,UNKNOWN_MEMBER,warning,"Row 24: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+24,UNKNOWN_PAYER,warning,"Row 24: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+25,SUSPECTED_DUPLICATE,warning,"Rows 24 and 25 may be duplicate entries for the same event: ""Dinner at Thalassa"" (₹2400, paid by Aisha Sharma) vs ""Thalassa dinner"" (₹2450, paid by Rohan). Note: ""Aisha also logged this I think hers is wrong""",false,,needs_review
+25,UNKNOWN_PAYER,error,"Row 25: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+25,UNKNOWN_MEMBER,warning,"Row 25: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+26,FOREIGN_CURRENCY,warning,"Row 26 (""Parasailing refund""): Amount is in USD ($-30). Will be converted using the exchange rate you provide (default ₹84/USD).",false,,needs_review
+26,NEGATIVE_AMOUNT,info,"Row 26 (""Parasailing refund""): Amount is negative (-30). Treating as a refund — each participant's share will be reversed.",true,Treating as refund (split type → refund),auto_fixed
+26,UNKNOWN_MEMBER,warning,"Row 26: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+27,UNKNOWN_PAYER,error,"Row 27: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+27,UNKNOWN_MEMBER,warning,"Row 27: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+27,DATE_FORMAT,info,"Row 27: Non-standard date ""Mar-14"" parsed as 2026-03-14 (assumed year 2026).",true,"""Mar-14"" → ""2026-03-14""",auto_fixed
+27,NAME_NORMALIZATION,info,"Row 27: paid_by ""rohan"" normalized to ""Rohan""",true,"Normalized ""rohan"" → ""Rohan""",auto_fixed
+28,UNKNOWN_MEMBER,warning,"Row 28: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+28,MISSING_CURRENCY,warning,Row 28: Currency is blank. Defaulting to INR.,true,Defaulted to INR,auto_fixed
+28,UNKNOWN_PAYER,error,"Row 28: paid_by ""Priya"" is not a known member and has no close match.",false,,needs_review
+29,UNKNOWN_MEMBER,warning,"Row 29: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+29,UNKNOWN_PAYER,warning,"Row 29: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+30,UNKNOWN_PAYER,error,"Row 30: paid_by ""Meera"" is not a known member and has no close match.",false,,needs_review
+30,UNKNOWN_MEMBER,warning,"Row 30: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+31,UNKNOWN_MEMBER,warning,"Row 31: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+31,ZERO_AMOUNT,error,"Row 31 (""Dinner order Swiggy""): Amount is ₹0. Note: ""counted twice earlier - fixing later"". This likely a placeholder row and will be skipped.",false,,rejected
+31,UNKNOWN_PAYER,error,"Row 31: paid_by ""Priya"" is not a known member and has no close match.",false,,needs_review
+32,INVALID_PERCENTAGE,error,"Row 32 (""Weekend brunch""): Percentages sum to 110.0% instead of 100%. This row cannot be imported as-is.",false,,needs_review
+32,UNKNOWN_PAYER,error,"Row 32: paid_by ""Meera"" is not a known member and has no close match.",false,,needs_review
+32,UNKNOWN_MEMBER,warning,"Row 32: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+33,UNKNOWN_PAYER,warning,"Row 33: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+33,UNKNOWN_MEMBER,warning,"Row 33: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+34,UNKNOWN_MEMBER,warning,"Row 34: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+34,UNKNOWN_PAYER,error,"Row 34: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+35,RATIO_SPLIT,info,"Row 35: split_type ""share"" uses ratio-based splitting. Supported.",true,"Treating ""share"" as ratio split type",auto_fixed
+35,UNKNOWN_PAYER,warning,"Row 35: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+35,UNKNOWN_MEMBER,warning,"Row 35: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+36,UNKNOWN_PAYER,error,"Row 36: paid_by ""Priya"" is not a known member and has no close match.",false,,needs_review
+36,UNKNOWN_MEMBER,warning,"Row 36: Unknown participant(s): Aisha, Rohan, Priya, Meera. These will be created as guests.",false,,needs_review
+36,MEMBER_LEFT,warning,"Row 36 (""Groceries BigBasket"", date 2026-04-02): Meera left on 2026-03-31 but is still in the split.",false,,needs_review
+37,UNKNOWN_MEMBER,warning,"Row 37: Unknown participant(s): Aisha, Rohan, Priya. These will be created as guests.",false,,needs_review
+37,UNKNOWN_PAYER,error,"Row 37: paid_by ""Rohan"" is not a known member and has no close match.",false,,needs_review
+38,UNKNOWN_MEMBER,warning,Row 38: Unknown participant(s): Aisha. These will be created as guests.,false,,needs_review
+38,UNKNOWN_PAYER,error,"Row 38: paid_by ""Sam"" is not a known member and has no close match.",false,,needs_review
+38,IS_SETTLEMENT,warning,"Row 38 (""Sam deposit share""): This looks like a settlement or deposit, not a shared expense. Notes say: ""Sam moving in! paid Aisha his deposit""",false,,needs_review
+39,UNKNOWN_PAYER,error,"Row 39: paid_by ""Sam"" is not a known member and has no close match.",false,,needs_review
+39,UNKNOWN_MEMBER,warning,"Row 39: Unknown participant(s): Aisha, Rohan, Priya, Sam. These will be created as guests.",false,,needs_review
+40,UNKNOWN_PAYER,warning,"Row 40: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+40,UNKNOWN_MEMBER,warning,"Row 40: Unknown participant(s): Aisha, Rohan, Priya, Sam. These will be created as guests.",false,,needs_review
+41,UNKNOWN_MEMBER,warning,"Row 41: Unknown participant(s): Aisha, Rohan, Priya, Sam. These will be created as guests.",false,,needs_review
+41,UNKNOWN_PAYER,error,"Row 41: paid_by ""Sam"" is not a known member and has no close match.",false,,needs_review
+42,UNKNOWN_PAYER,warning,"Row 42: paid_by ""Aisha"" is not a known member. Possible match: ""Aisha Sharma"".",false,,needs_review
+42,UNKNOWN_MEMBER,warning,"Row 42: Unknown participant(s): Aisha, Rohan, Priya, Sam. These will be created as guests.",false,,approved
+42,CONFLICTING_SPLIT,info,"Row 42 (""Furniture for common room""): split_type is ""equal"" but split_details are also present. Split details will be ignored, equal split applied.",true,Ignored split_details — using equal split,auto_fixed
+43,UNKNOWN_MEMBER,warning,"Row 43: Unknown participant(s): Aisha, Rohan, Priya, Sam. These will be created as guests.",false,,needs_review
+43,UNKNOWN_PAYER,error,"Row 43: paid_by ""Priya"" is not a known member and has no close match.",false,,rejected
