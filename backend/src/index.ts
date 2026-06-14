@@ -54,9 +54,11 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
   res.status(500).json({ error: "Internal server error", message: err.message });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`   Environment: ${process.env.NODE_ENV ?? "development"}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`   Environment: ${process.env.NODE_ENV ?? "development"}`);
+  });
+}
 
 export default app;
