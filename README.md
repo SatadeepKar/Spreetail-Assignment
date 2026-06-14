@@ -4,8 +4,7 @@ A full-stack shared expense tracker built for four flatmates (Aisha, Rohan, Priy
 
 ## Live Demo
 
-- **Frontend:** [https://splitwise-lpu.vercel.app](https://splitwise-lpu.vercel.app) *(deploy and update this URL)*
-- **Backend API:** [https://splitwise-backend.onrender.com](https://splitwise-backend.onrender.com) *(deploy and update this URL)*
+- **Frontend:** [https://vercel.com/satadeepkars-projects/spreetail-assignment](https://vercel.com/satadeepkars-projects/spreetail-assignment)) 
 
 ## Tech Stack
 
