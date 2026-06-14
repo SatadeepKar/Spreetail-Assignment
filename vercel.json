@@ -9,7 +9,7 @@
       "root": "backend",
       "routePrefix": "/api",
       "entrypoint": "src/index.ts",
-      "runtime": "@vercel/node"
+      "runtime": "nodejs20.x"
     }
   }
 }
